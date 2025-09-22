@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nafel Group - Leading Engineering & Construction Solutions</title>
+    <link rel="preload" href="nafelwhite.png" as="image">
+    <link rel="preload" href="nafel black logo.png" as="image">
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="hero-page">
@@ -21,7 +25,7 @@
                         <a href="fuselab.html">Fuselab Creative</a>
                         <a href="nafel-tech.html">Nafel Tech</a>
                         <a href="fal-construction.html">FAL Construction</a>
-                        <a href="nafel-fire-protection.html">Nafel Fire Protection</a>
+                        <a href="nafel-fire-protection.html">Nafel Contracting</a>
                         <a href="sedrah.html">Sedrah Project Management</a>
                         <a href="bee-automations.html">Bee Automations</a>
                     </div>
@@ -49,7 +53,7 @@
         
         <div class="container">
             <div class="hero-content">
-                <img src="nafelwhite.png" alt="Nafel Group" class="hero-logo">
+                <img src="nafelwhite.png" alt="Nafel Group" class="hero-logo" loading="eager">
                 <p class="hero-subtitle">Leading Engineering, Automation & Construction Solutions</p>
                 <div class="hero-cta">
                     <a href="about.html" class="btn btn-primary">Discover Our Story</a>
@@ -60,44 +64,78 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-logos">
-                <img src="nafel black logo.png" alt="nafel group" class="group-logo">
-                <div class="logo-grid">
-                    <div class="logo-item">
-                        <img src="bee.avif" alt="Bee Automations" class="company-logo">
-                        <span class="logo-label">Bee Automations</span>
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="group-logo-section">
+                        <img src="nafel black logo.png" alt="Nafel Group" class="group-logo" loading="eager">
                     </div>
-                    <div class="logo-item">
-                        <img src="emcan logo.jpg" alt="Emcan Engineering" class="company-logo">
-                        <span class="logo-label">Emcan Engineering</span>
-                    </div>
-                    <div class="logo-item">
-                        <img src="fuselab.jpg" alt="Fuselab Creative" class="company-logo">
-                        <span class="logo-label">Fuselab Creative</span>
-                    </div>
-                    <div class="logo-item">
-                        <div class="company-icon">
-                            <i class="fas fa-building"></i>
+                    
+                    <div class="companies-section">
+                        <div class="companies-grid">
+                            <div class="company-wrapper">
+                                <a href="fal-construction.html">
+                                    <div class="company-item">
+                                        <img src="fal.png" alt="FAL Construction" class="company-logo">
+                                        <span class="company-name">FAL Construction</span>
+                                    </div>
+                                </a>
+                                <p class="company-description">Professional construction services delivering quality building solutions.</p>
+                            </div>
+                            <div class="company-wrapper">
+                                <a href="emcan-engineering.html">
+                                    <div class="company-item">
+                                        <img src="emcan logo.jpg" alt="Emcan Engineering" class="company-logo">
+                                        <span class="company-name">Emcan Engineering</span>
+                                    </div>
+                                </a>
+                                <p class="company-description">Certified engineering consultancy for industrial architecture and MEP design.</p>
+                            </div>
+                            <div class="company-wrapper">
+                                <a href="nafel-fire-protection.html" class="nafel-contracting-link">
+                                    <div class="nafel-contracting-item">
+                                        <img src="thumbnail.png" alt="Nafel Contracting" class="company-logo">
+                                        <span class="company-name">Nafel Contracting</span>
+                                    </div>
+                                </a>
+                                <p class="company-description">Professional construction and contracting services delivering quality infrastructure and building solutions.</p>
+                            </div>
+                            <div class="company-wrapper">
+                                <a href="nafel-tech.html" class="nafel-tech-link">
+                                    <div class="nafel-tech-item">
+                                        <img src="techlogo.PNG" alt="Nafel Tech" class="company-logo">
+                                        <span class="company-name">Nafel Tech</span>
+                                    </div>
+                                </a>
+                                <p class="company-description">Advanced technology solutions and digital transformation services.</p>
+                            </div>
+                            <div class="company-wrapper">
+                                <a href="fuselab.html">
+                                    <div class="company-item">
+                                        <img src="fuselab.jpg" alt="Fuselab Creative" class="company-logo">
+                                        <span class="company-name">Fuselab Creative</span>
+                                    </div>
+                                </a>
+                                <p class="company-description">UX/UI services creating transformational digital experiences using artificial intelligence and machine learning.</p>
+                            </div>
+                            <div class="company-wrapper">
+                                <a href="sedrah.html">
+                                    <div class="company-item">
+                                        <img src="sedrahlogo.jpg" alt="Sedrah Project Management" class="company-logo">
+                                        <span class="company-name">Sedrah Project Management</span>
+                                    </div>
+                                </a>
+                                <p class="company-description">Comprehensive project management and construction supervision services.</p>
+                            </div>
+                            <div class="company-wrapper">
+                                <a href="bee-automations.html">
+                                    <div class="company-item">
+                                        <img src="beelogo.avif" alt="Bee Automations" class="company-logo">
+                                        <span class="company-name">Bee Automations</span>
+                                    </div>
+                                </a>
+                                <p class="company-description">Automation solutions for coffee roasters and food producers to scale more efficiently with less waste.</p>
+                            </div>
                         </div>
-                        <span class="logo-label">Nafel Tech</span>
-                    </div>
-                    <div class="logo-item">
-                        <div class="company-icon">
-                            <i class="fas fa-hammer"></i>
-                        </div>
-                        <span class="logo-label">FAL Construction</span>
-                    </div>
-                    <div class="logo-item">
-                        <div class="company-icon">
-                            <i class="fas fa-fire-extinguisher"></i>
-                        </div>
-                        <span class="logo-label">Nafel Fire Protection</span>
-                    </div>
-                    <div class="logo-item">
-                        <div class="company-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <span class="logo-label">Sedrah Project Management</span>
                     </div>
                 </div>
             </div>
