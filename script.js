@@ -117,14 +117,50 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
     }
 });
 
-// Add loading animation to page
+// Add loading animation to page - ensure all resources are loaded
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease-in-out';
+    // Wait for all images to load before showing content
+    const images = document.querySelectorAll('img');
+    let loadedImages = 0;
     
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    if (images.length === 0) {
+        // No images, show content immediately
+        showContent();
+    } else {
+        images.forEach(img => {
+            if (img.complete) {
+                loadedImages++;
+            } else {
+                img.addEventListener('load', () => {
+                    loadedImages++;
+                    if (loadedImages === images.length) {
+                        showContent();
+                    }
+                });
+                img.addEventListener('error', () => {
+                    loadedImages++;
+                    if (loadedImages === images.length) {
+                        showContent();
+                    }
+                });
+            }
+        });
+        
+        // Fallback timeout in case some images don't load
+        setTimeout(() => {
+            showContent();
+        }, 3000);
+    }
+    
+    function showContent() {
+        document.body.classList.add('loaded');
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        
+        setTimeout(() => {
+            document.body.style.opacity = '1';
+        }, 100);
+    }
 });
 
 // Parallax effect for hero section
