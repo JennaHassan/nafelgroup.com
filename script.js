@@ -237,6 +237,97 @@ function updateActiveNavLink() {
 
 window.addEventListener('scroll', updateActiveNavLink);
 
+// Page Transition System
+class PageTransition {
+    constructor() {
+        this.transitionElement = null;
+        this.init();
+    }
+
+    init() {
+        this.createTransitionElement();
+        this.bindNavigationLinks();
+        this.handlePageLoad();
+    }
+
+    createTransitionElement() {
+        // Create transition overlay
+        const transitionDiv = document.createElement('div');
+        transitionDiv.className = 'page-transition';
+        transitionDiv.innerHTML = `
+            <img src="nafel black logo.png" alt="Nafel Group" class="page-transition-logo">
+            <div class="page-transition-text">Loading...</div>
+            <div class="page-transition-spinner"></div>
+        `;
+        document.body.appendChild(transitionDiv);
+        this.transitionElement = transitionDiv;
+    }
+
+    bindNavigationLinks() {
+        // Add transition to all internal links
+        document.querySelectorAll('a[href$=".html"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                this.startTransition(href);
+            });
+        });
+    }
+
+    startTransition(destination) {
+        // Show transition overlay immediately
+        this.transitionElement.classList.add('active');
+        
+        // Hide current page content
+        const pageContent = document.querySelector('.page-content');
+        if (pageContent) {
+            pageContent.style.opacity = '0';
+            pageContent.style.transform = 'translateY(20px)';
+        }
+
+        // Navigate after transition is visible
+        setTimeout(() => {
+            window.location.href = destination;
+        }, 1200);
+    }
+
+    handlePageLoad() {
+        // Show page content with animation when page loads
+        window.addEventListener('load', () => {
+            // Ensure transition overlay is hidden
+            if (this.transitionElement) {
+                this.transitionElement.classList.remove('active');
+            }
+            
+            // Show page content with animation
+            setTimeout(() => {
+                const pageContent = document.querySelector('.page-content');
+                if (pageContent) {
+                    pageContent.style.opacity = '1';
+                    pageContent.style.transform = 'translateY(0)';
+                    pageContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                }
+            }, 200);
+        });
+    }
+}
+
+// Initialize page transitions
+document.addEventListener('DOMContentLoaded', () => {
+    new PageTransition();
+    
+    // Show page content on initial load
+    setTimeout(() => {
+        const pageContent = document.querySelector('.page-content');
+        if (pageContent) {
+            pageContent.style.opacity = '1';
+            pageContent.style.transform = 'translateY(0)';
+            pageContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        }
+        document.body.classList.add('loaded');
+    }, 100);
+});
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Nafel Group website loaded successfully');
