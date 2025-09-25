@@ -3185,10 +3185,8 @@ body.white-background .company-info img[src="thumbnail.png"] {
     
     body.white-background .footer-content,
     body.green-nav .footer-content {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: space-between !important;
-        align-items: flex-start !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
         gap: 0.5rem !important;
         padding: 0 10px !important;
         margin-bottom: 0.5rem !important;
@@ -3196,9 +3194,29 @@ body.white-background .company-info img[src="thumbnail.png"] {
     
     body.white-background .footer-section,
     body.green-nav .footer-section {
-        flex: 1 !important;
-        min-width: 45% !important;
         margin-bottom: 0.5rem !important;
+        text-align: left !important;
+    }
+    
+    /* Make logo section span full width on mobile */
+    body.white-background .footer-section:first-child,
+    body.green-nav .footer-section:first-child {
+        grid-column: 1 / -1 !important;
+        text-align: center !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Quick Links - closer to logo */
+    body.white-background .footer-section:nth-child(2),
+    body.green-nav .footer-section:nth-child(2) {
+        grid-column: 1 / 2 !important;
+        text-align: left !important;
+    }
+    
+    /* Contact - more space */
+    body.white-background .footer-section:nth-child(3),
+    body.green-nav .footer-section:nth-child(3) {
+        grid-column: 2 / 4 !important;
         text-align: left !important;
     }
     
@@ -3216,7 +3234,12 @@ body.white-background .company-info img[src="thumbnail.png"] {
         font-size: 0.6rem !important;
         line-height: 1.2 !important;
         margin-bottom: 0.2rem !important;
-        display: none !important; /* Hide descriptions on mobile */
+    }
+    
+    /* Hide only the company description paragraph, keep contact email visible */
+    body.white-background .footer-section:first-child p,
+    body.green-nav .footer-section:first-child p {
+        display: none !important;
     }
     
     body.white-background .footer-section ul,
