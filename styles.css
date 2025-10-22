@@ -1245,8 +1245,62 @@ body:not(.hero-page) .dropdown-toggle {
     color: #2F4F2F !important;
 }
 
-body:not(.hero-page) .bar {
-    background-color: #2F4F2F !important;
+/* Language Button Styling */
+.language-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+    transform: translateY(-1px);
+}
+
+.language-btn i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.language-btn:hover i {
+    transform: rotate(15deg);
+}
+
+/* Language button styling for different page types */
+body:not(.hero-page) .language-btn {
+    color: #2F4F2F !important;
+    text-shadow: none !important;
+}
+
+body:not(.hero-page) .language-btn:hover {
+    color: #1B4D3E !important;
+}
+
+body:not(.hero-page) .language-btn::after {
+    background: #2F4F2F !important;
+}
+
+/* Home page language button styling */
+body.hero-page .language-btn {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.hero-page .language-btn:hover {
+    color: #666666 !important;
+}
+
+body.hero-page .language-btn::after {
+    background: #ffffff !important;
 }
 
 /* About page specific styling - navbar styling now handled by general rule above */
