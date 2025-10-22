@@ -1221,55 +1221,35 @@ body.loaded {
     transform: scale(1.1);
 }
 
-/* White background pages - override navigation colors */
+/* All pages except home should have white navbar with green text like sedrah */
+body:not(.hero-page) .navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(47, 79, 47, 0.1) !important;
+}
+
 body:not(.hero-page) .nav-link {
-    color: #ffffff !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
-}
-
-body:not(.hero-page) .nav-link:hover {
-    color: #666666 !important;
-}
-
-body:not(.hero-page) .nav-link::after {
-    background: #ffffff !important;
-}
-
-body:not(.hero-page) .dropdown-toggle {
-    color: #ffffff !important;
-}
-
-body:not(.hero-page) .bar {
-    background-color: #ffffff !important;
-}
-
-/* Dark green navigation for about page */
-body.green-nav .nav-link {
     color: #2F4F2F !important;
     text-shadow: none !important;
 }
 
-body.green-nav .nav-link:hover {
+body:not(.hero-page) .nav-link:hover {
     color: #1B4D3E !important;
 }
 
-body.green-nav .nav-link::after {
+body:not(.hero-page) .nav-link::after {
     background: #2F4F2F !important;
 }
 
-body.green-nav .dropdown-toggle {
+body:not(.hero-page) .dropdown-toggle {
     color: #2F4F2F !important;
 }
 
-body.green-nav .bar {
+body:not(.hero-page) .bar {
     background-color: #2F4F2F !important;
 }
 
-/* Transparent white navbar background for about page */
-body.green-nav .navbar {
-    background: rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(20px) !important;
-}
+/* About page specific styling - navbar styling now handled by general rule above */
 
 body.green-nav {
     background-color: #d4e6d4 !important;
@@ -1539,9 +1519,9 @@ body.white-background .footer-bottom p {
     padding: 60px 0;
 }
 
-/* Enhanced background for team page */
+/* Clean white background for all company pages */
 body.white-background {
-    background-color: #d4e6d4;
+    background-color: #ffffff;
     position: relative;
 }
 
@@ -1583,89 +1563,13 @@ body.white-background .bg-img {
     filter: blur(3px);
 }
 
-/* Green background for Emcan page instead of white */
-body.white-background.emcan-page {
-    background-color: rgba(47, 79, 47, 0.15) !important;
-}
+/* Emcan page - now uses clean white background */
 
-/* Enhanced green overlay for Emcan page */
-body.white-background.emcan-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.25) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
+/* Nafel Tech page - now uses clean white background */
 
-/* Green background for Nafel Tech page instead of white */
-body.white-background.nafel-tech-page {
-    background-color: rgba(47, 79, 47, 0.15) !important;
-}
+/* FAL Construction page - now uses clean white background */
 
-/* Enhanced green overlay for Nafel Tech page */
-body.white-background.nafel-tech-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.25) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Green background for FAL Construction page instead of white */
-body.white-background.fal-construction-page {
-    background-color: rgba(47, 79, 47, 0.15) !important;
-}
-
-/* Enhanced green overlay for FAL Construction page */
-body.white-background.fal-construction-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.25) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Green background for Nafel Fire Protection page instead of white */
-body.white-background.nafel-fire-page {
-    background-color: rgba(47, 79, 47, 0.15) !important;
-}
-
-/* Enhanced green overlay for Nafel Fire Protection page */
-body.white-background.nafel-fire-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.25) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
+/* Nafel Fire Protection page - now uses clean white background */
 
 /* FAL Construction Projects Layout */
 body.white-background.fal-construction-page .projects-showcase .container {
@@ -1697,7 +1601,7 @@ body.white-background.fal-construction-page .project-showcase {
     }
     
     body.white-background.fal-construction-page .project-image {
-        height: 400px;
+        height: 350px;
     }
     
     body.white-background.fal-construction-page .project-overlay {
@@ -1717,29 +1621,48 @@ body.white-background.fal-construction-page .project-showcase {
 }
 
 body.white-background.fal-construction-page .project-image {
-    height: 300px;
+    height: 400px;
     width: 100%;
     object-fit: cover;
 }
 
-/* Fuselab Page Background Overlay */
-body.white-background.fuselab-page {
-    background-color: rgba(47, 79, 47, 0.15) !important;
+/* Fuselab Projects Showcase - matching Sedrah layout */
+body.white-background.fuselab-page .projects-showcase .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-body.white-background.fuselab-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.25) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
+/* Nafel Fire Protection Projects Showcase - matching Sedrah layout */
+body.white-background.nafel-fire-page .projects-showcase .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Center the last 2 projects on Fuselab page */
+body.white-background.fuselab-page .project-showcase:nth-child(5),
+body.white-background.fuselab-page .project-showcase:nth-child(6) {
+    grid-column: span 2;
+    justify-self: center;
+}
+
+/* Center the last 2 projects on Nafel Fire Protection page */
+body.white-background.nafel-fire-page .project-showcase:nth-child(5),
+body.white-background.nafel-fire-page .project-showcase:nth-child(6) {
+    grid-column: span 2;
+    justify-self: center;
+}
+
+/* Center the last 2 projects on Emcan page */
+body.white-background.emcan-page .project-showcase:nth-child(5),
+body.white-background.emcan-page .project-showcase:nth-child(6) {
+    grid-column: span 2;
+    justify-self: center;
 }
 
 /* Project Showcase Styling */
@@ -1772,7 +1695,7 @@ body.white-background.fuselab-page::before {
 
 .project-image {
     width: 100%;
-    height: 380px;
+    height: 400px;
     object-fit: cover;
     display: block;
 }
@@ -1833,13 +1756,21 @@ body.white-background.fuselab-page::before {
 
 /* Responsive design for project showcase */
 @media (max-width: 1024px) {
-    .projects-showcase .container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+    /* Reset centering on tablet for Fuselab, Nafel Fire Protection, and Emcan */
+    body.white-background.fuselab-page .project-showcase:nth-child(5),
+    body.white-background.fuselab-page .project-showcase:nth-child(6),
+    body.white-background.nafel-fire-page .project-showcase:nth-child(5),
+    body.white-background.nafel-fire-page .project-showcase:nth-child(6),
+    body.white-background.emcan-page .project-showcase:nth-child(5),
+    body.white-background.emcan-page .project-showcase:nth-child(6) {
+        grid-column: span 1;
+        justify-self: stretch;
     }
     
-    .project-image {
-        height: 250px;
+    body.white-background.fuselab-page .project-image,
+    body.white-background.nafel-fire-page .project-image,
+    body.white-background.emcan-page .project-image {
+        height: 300px;
     }
     
     .services-grid-centered {
@@ -1854,9 +1785,11 @@ body.white-background.fuselab-page::before {
 }
 
 @media (max-width: 768px) {
-    .projects-showcase .container {
+    body.white-background.fuselab-page .projects-showcase .container,
+    body.white-background.nafel-fire-page .projects-showcase .container,
+    body.white-background.emcan-page .projects-showcase .container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
         max-width: 400px;
         margin: 0 auto;
         justify-items: center;
@@ -1867,8 +1800,10 @@ body.white-background.fuselab-page::before {
         width: 100%;
     }
     
-    .project-image {
-        height: 400px;
+    body.white-background.fuselab-page .project-image,
+    body.white-background.nafel-fire-page .project-image,
+    body.white-background.emcan-page .project-image {
+        height: 350px;
     }
     
     .project-overlay {
@@ -1896,6 +1831,7 @@ body.white-background.fuselab-page::before {
     }
 }
 
+/* Clean white transparency overlay for all company pages */
 body.white-background::before {
     content: '';
     position: fixed;
@@ -1904,9 +1840,9 @@ body.white-background::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.04) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
     pointer-events: none;
     z-index: 1;
 }
@@ -2489,63 +2425,9 @@ body.white-background .company-header {
     margin: 0 !important;
 }
 
-/* White navbar background for white-background pages */
-body.white-background .navbar {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(20px) !important;
-    border-bottom: 1px solid rgba(47, 79, 47, 0.1) !important;
-}
+/* White-background pages specific styling - navbar styling now handled by general rule above */
 
-/* Navigation colors for white-background pages */
-body.white-background .nav-link {
-    color: #2F4F2F !important;
-    text-shadow: none !important;
-}
-
-body.white-background .nav-link:hover {
-    color: #1B4D3E !important;
-}
-
-body.white-background .nav-link::after {
-    background: #2F4F2F !important;
-}
-
-body.white-background .dropdown-toggle {
-    color: #2F4F2F !important;
-}
-
-body.white-background .bar {
-    background-color: #2F4F2F !important;
-}
-
-/* Dark green navigation for team page only */
-body.white-background.team-page .nav-link {
-    color: #2F4F2F !important;
-    text-shadow: none !important;
-}
-
-body.white-background.team-page .nav-link:hover {
-    color: #1B4D3E !important;
-}
-
-body.white-background.team-page .nav-link::after {
-    background: #2F4F2F !important;
-}
-
-body.white-background.team-page .dropdown-toggle {
-    color: #2F4F2F !important;
-}
-
-body.white-background.team-page .bar {
-    background-color: #2F4F2F !important;
-}
-
-/* White navbar background for team page */
-body.white-background.team-page .navbar {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(20px) !important;
-    border-bottom: 1px solid rgba(47, 79, 47, 0.1) !important;
-}
+/* Team page specific styling - navbar styling now handled by general rule above */
 
 /* Center paragraphs in Meet The Team section on team page */
 body.white-background.team-page .company-description p {
@@ -3413,7 +3295,7 @@ body.white-background.nafel-tech-page .project-showcase {
 }
 
 body.white-background.nafel-tech-page .project-image {
-    height: 380px;
+    height: 400px;
 }
 
 /* Sedrah Projects Showcase - matching FAL layout */
@@ -3490,7 +3372,7 @@ body.white-background.sedrah-page .project-overlay p {
     }
     
     body.white-background.sedrah-page .project-image {
-        height: 350px;
+        height: 300px;
     }
 }
 
@@ -3509,7 +3391,7 @@ body.white-background.sedrah-page .project-overlay p {
     }
     
     body.white-background.sedrah-page .project-image {
-        height: 400px;
+        height: 350px;
     }
     
     body.white-background.sedrah-page .project-overlay {
@@ -3527,26 +3409,7 @@ body.white-background.sedrah-page .project-overlay p {
     }
 }
 
-/* Sedrah Background with Green Fade */
-body.white-background.sedrah-page {
-    background-color: rgba(47, 79, 47, 0.15) !important;
-}
-
-/* Enhanced green overlay for Sedrah page */
-body.white-background.sedrah-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.25) 0%, transparent 50%);
-    z-index: 2;
-    pointer-events: none;
-}
+/* Sedrah page - now uses clean white background */
 
 /* Sedrah background image styling */
 body.white-background.sedrah-page .background-image {
@@ -3650,26 +3513,7 @@ body.white-background.bee-automations-page .bee-main-project .project-overlay p 
     }
 }
 
-/* Bee Automations Background with Green Fade */
-body.white-background.bee-automations-page {
-    background-color: rgba(47, 79, 47, 0.15) !important;
-}
-
-/* Enhanced green overlay for Bee Automations page */
-body.white-background.bee-automations-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.25) 0%, transparent 50%);
-    z-index: 2;
-    pointer-events: none;
-}
+/* Bee Automations page - now uses clean white background */
 
 /* Bee Automations background image styling */
 body.white-background.bee-automations-page .background-image {
@@ -3786,26 +3630,7 @@ body.white-background.nafel-fire-page .company-header {
     height: auto !important;
 }
 
-/* Nafel Fire Protection page background */
-body.white-background.nafel-fire-page {
-    background-color: #d4e6d4;
-    position: relative;
-}
-
-body.white-background.nafel-fire-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.02) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
+/* Nafel Fire Protection page background - now uses clean white background */
 
 /* Make sections transparent on Nafel Fire page */
 body.white-background.nafel-fire-page .company-header,
@@ -3823,26 +3648,7 @@ body.white-background.sedrah-page .company-header {
     height: auto !important;
 }
 
-/* Sedrah page background */
-body.white-background.sedrah-page {
-    background-color: #d4e6d4;
-    position: relative;
-}
-
-body.white-background.sedrah-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.02) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
+/* Sedrah page background - now uses clean white background */
 
 /* Make sections transparent on Sedrah page */
 body.white-background.sedrah-page .company-header,
@@ -3859,26 +3665,7 @@ body.white-background.bee-automations-page .company-header {
     height: auto !important;
 }
 
-/* Bee Automations page background */
-body.white-background.bee-automations-page {
-    background-color: #d4e6d4;
-    position: relative;
-}
-
-body.white-background.bee-automations-page::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(47, 79, 47, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(152, 251, 152, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(47, 79, 47, 0.02) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-}
+/* Bee Automations page background - now uses clean white background */
 
 /* Make sections transparent on Bee Automations page */
 body.white-background.bee-automations-page .company-header,
