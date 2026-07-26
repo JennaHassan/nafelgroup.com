@@ -585,6 +585,7 @@ class AITranslator {
             'Nafel Co': 'نافل للمقاولات',
             'Nafel Contracting': 'نافل للمقاولات',
             'Nafel Tech': 'نافل للتكنولوجيا',
+            'Nafel Kinetechs': 'نافل كينيتيكس',
             'Fuselab Creative': 'فيوزلاب الإبداعية',
             'Fuselab Creative SA': 'فيوزلاب الإبداعية السعودية',
             'Sedrah Project Management': 'سدرة لإدارة المشاريع',
@@ -1510,9 +1511,11 @@ class AITranslator {
             'Cold': 'المخازن',
             'Stores': 'الباردة',
             
-            // Nafel Tech page translations
+            // Nafel Kinetechs page translations
             'Nafel Tech': 'نافل للتكنولوجيا',
-            'Nafel Tech specializes in installing and commissioning production lines in factories. The company provides complete solutions, from installation and integration to testing and maintenance. With strong expertise in automation and optimization, Nafel Tech helps manufacturers enhance production efficiency, minimize downtime, and achieve reliable, high-quality operations.': 'تتخصص نافل للتكنولوجيا في تركيب وتشغيل خطوط الإنتاج في المصانع. توفر الشركة حلولاً شاملة، من التركيب والتكامل إلى الاختبار والصيانة. مع خبرة قوية في الأتمتة والتحسين، تساعد نافل للتكنولوجيا المصنعين على تعزيز كفاءة الإنتاج وتقليل وقت التوقف وتحقيق عمليات موثوقة وعالية الجودة.',
+            'Nafel Kinetechs': 'نافل كينيتيكس',
+            'Visit kinetechs-solutions.com for more': 'زر kinetechs-solutions.com للمزيد',
+            'Nafel Kinetechs specializes in installing and commissioning production lines in factories. The company provides complete solutions, from installation and integration to testing and maintenance. With strong expertise in automation and optimization, Nafel Kinetechs helps manufacturers enhance production efficiency, minimize downtime, and achieve reliable, high-quality operations.': 'تتخصص نافل كينيتيكس في تركيب وتشغيل خطوط الإنتاج في المصانع. توفر الشركة حلولاً شاملة، من التركيب والتكامل إلى الاختبار والصيانة. مع خبرة قوية في الأتمتة والتحسين، تساعد نافل كينيتيكس المصنعين على تعزيز كفاءة الإنتاج وتقليل وقت التوقف وتحقيق عمليات موثوقة وعالية الجودة.',
             
             'Field Technical Services': 'خدمات فنية ميدانية',
             'On-site technical support and maintenance services with expertise in automation, robotics, SCADA, and digitalization across various industries.': 'خدمات دعم فني وصيانة على الموقع مع خبرة في الأتمتة والروبوتات ونظام التحكم والإشراف والحصول على البيانات والرقمنة عبر مختلف الصناعات.',
@@ -2363,15 +2366,4 @@ class AITranslator {
         // Remove error message after 3 seconds
         setTimeout(() => {
             if (errorDiv.parentNode) {
-                errorDiv.parentNode.removeChild(errorDiv);
-            }
-        }, 3000);
-    }
-}
-
-// Initialize AI Translator when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new AITranslator();
-});
-
-// Initialize everything when DOM is loaded
+                errorDiv.parentNode.removeChild(err

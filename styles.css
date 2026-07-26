@@ -2640,6 +2640,29 @@ body.white-background .company-services {
     padding: 0 20px;
 }
 
+.company-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0 20px;
+}
+
+.btn-company {
+    background: #2F4F2F;
+    color: #ffffff;
+    border: 2px solid #2F4F2F;
+    text-transform: none;
+    letter-spacing: 0.3px;
+}
+
+.btn-company:hover {
+    background: #1B4D3E;
+    border-color: #1B4D3E;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(47, 79, 47, 0.3);
+}
+
 /* Logo Stamp Styling underneath navbar */
 .logo-stamp {
     position: fixed;
@@ -3723,18 +3746,4 @@ body.white-background.bee-automations-page .company-header {
 
 /* Make sections transparent on Bee Automations page */
 body.white-background.bee-automations-page .company-header,
-body.white-background.bee-automations-page .company-services,
-body.white-background.bee-automations-page .projects-showcase {
-    background: transparent;
-    position: relative;
-    z-index: 3;
-}
-
-/* Reduce spacing between services and projects for Bee Automations */
-body.white-background.bee-automations-page .company-services {
-    padding-bottom: 20px;
-}
-
-body.white-background.bee-automations-page .projects-showcase {
-    padding-top: 20px;
-}
+body.white-back
