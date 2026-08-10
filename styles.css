@@ -3746,4 +3746,18 @@ body.white-background.bee-automations-page .company-header {
 
 /* Make sections transparent on Bee Automations page */
 body.white-background.bee-automations-page .company-header,
-body.white-back
+body.white-background.bee-automations-page .company-services,
+body.white-background.bee-automations-page .projects-showcase {
+    background: transparent;
+    position: relative;
+    z-index: 3;
+}
+
+/* Reduce spacing between services and projects for Bee Automations */
+body.white-background.bee-automations-page .company-services {
+    padding-bottom: 20px;
+}
+
+body.white-background.bee-automations-page .projects-showcase {
+    padding-top: 20px;
+}

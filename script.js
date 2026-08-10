@@ -2366,4 +2366,15 @@ class AITranslator {
         // Remove error message after 3 seconds
         setTimeout(() => {
             if (errorDiv.parentNode) {
-                errorDiv.parentNode.removeChild(err
+                errorDiv.parentNode.removeChild(errorDiv);
+            }
+        }, 3000);
+    }
+}
+
+// Initialize AI Translator when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new AITranslator();
+});
+
+// Initialize everything when DOM is loaded
